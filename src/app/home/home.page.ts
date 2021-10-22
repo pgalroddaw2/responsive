@@ -12,7 +12,7 @@ export class HomePage {
   variables: any;
 
   constructor(private httpClient: HttpClient) {
-    this.variables = this.httpClient.get('https://miserver/folder/arrayjson');
+    this.variables = this.httpClient.get('https://raw.githubusercontent.com/pgalroddaw2/responsive/master/src/app/home/MOCK_DATA.json');
   }
 
 }

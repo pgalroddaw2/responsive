@@ -9,11 +9,13 @@
 <ion-content [fullscreen]="true">
   <ion-grid>
     <ion-row>
-      <ion-col *ngFor= "let user of users | async" size-xl="2" size-lg="2" size-md="4" size-sm="6">
+      <ion-col *ngFor= "let variable of variables | async" size-xl="2" size-lg="2" size-md="4" size-sm="6">
         <ion-card>
           <ion-card-content>
             
-            <h1>{{ user.name.first }} {{ user.name.last }}</h1>
+            <h1>{{ variable.nombre }} {{ variable.apellido }}</h1>
+            <h4>{{ variable.bitcoin }}</h4>
+            
             Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam at aliquam urna. In fringilla dignissim nibh sit amet consectetur. Duis eu nulla lacus. Nulla sollicitudin leo in mattis hendrerit. Nam porta risus eu dolor imperdiet iaculis. Ut quis quam lectus. Proin non vehicula tellus. Pellentesque pharetra euismod augue sed euismod
           </ion-card-content>
         </ion-card>
