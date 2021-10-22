@@ -7,14 +7,19 @@
 </ion-header>
 
 <ion-content [fullscreen]="true">
-  <ion-header collapse="condense">
-    <ion-toolbar>
-      <ion-title size="large">Blank</ion-title>
-    </ion-toolbar>
-  </ion-header>
-
-  <div id="container">
-    <strong>Ready to create an app?</strong>
-    <p>Start with Ionic <a target="_blank" rel="noopener noreferrer" href="https://ionicframework.com/docs/components">UI Components</a></p>
-  </div>
+  <ion-grid>
+    <ion-row>
+      <ion-col *ngFor= "let user of users | async" size-xl="2" size-lg="2" size-md="4" size-sm="6">
+        <ion-card>
+          <ion-card-content>
+            <ion-avatar>
+              <img [src]="user.picture.medium">
+            </ion-avatar>
+            <h1>{{ user.name.first }} {{ user.name.last }}</h1>
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam at aliquam urna. In fringilla dignissim nibh sit amet consectetur. Duis eu nulla lacus. Nulla sollicitudin leo in mattis hendrerit. Nam porta risus eu dolor imperdiet iaculis. Ut quis quam lectus. Proin non vehicula tellus. Pellentesque pharetra euismod augue sed euismod
+          </ion-card-content>
+        </ion-card>
+      </ion-col>
+    </ion-row>
+  </ion-grid>
 </ion-content>
