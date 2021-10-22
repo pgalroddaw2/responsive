@@ -25,3 +25,14 @@
 #container a {
   text-decoration: none;
 }
+
+@media only screen{
+.nomap{
+  
+    transition-duration: 500ms;
+}
+.nomap:hover{
+  color:Tomato;
+  transform: scale(1.5, 1.5);
+}
+}
