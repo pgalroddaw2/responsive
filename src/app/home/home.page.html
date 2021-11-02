@@ -1,25 +1,30 @@
 <ion-header [translucent]="true">
   <ion-toolbar>
     <ion-title>
-      Blank
+      Lista Contactos
     </ion-title>
   </ion-toolbar>
 </ion-header>
 
 <ion-content [fullscreen]="true">
+  <ion-input [(ngModel)] = "filtro">
+
+  </ion-input>
   <ion-grid>
     <ion-row>
-      <ion-col *ngFor= "let variable of variables | async" size-xl="2" size-lg="2" size-md="4" size-sm="6">
-        <ion-card>
-          <ion-card-content>
-            
-            <h1 class= "nomap">{{ variable.nombre }} {{ variable.apellido }}</h1>
-            <h4>Bitcoin : {{ variable.bitcoin }}</h4>
-            <h4>Email : {{ variable.email }}</h4>
-            <h4>Pais : {{ variable.pais }}</h4>
-          </ion-card-content>
-        </ion-card>
-      </ion-col>
+      <ng-container *ngFor= "let variable of variables | async">
+        <ion-col *ngIf="filtro == '' || variable.nombre.startsWith(filtro) || variable.apellido.startsWith(filtro) || variable.bitcoin.startsWith(filtro) || variable.email.startsWith(filtro) || variable.pais.startsWith(filtro)"  size-xl="2" size-lg="2" size-md="4" size-sm="6">
+          <ion-card>
+            <ion-card-content>
+              
+              <h1 class= "nomap">{{ variable.nombre }} {{ variable.apellido }}</h1>
+              <h4 class= "btc">Bitcoin : {{ variable.bitcoin }}</h4>
+              <h4 class= "email">Email : {{ variable.email }}</h4>
+              <h4 class= "pais">Pais : {{ variable.pais }}</h4>
+            </ion-card-content>
+          </ion-card>
+        </ion-col>
+      </ng-container>
     </ion-row>
   </ion-grid>
 </ion-content>

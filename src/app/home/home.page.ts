@@ -10,6 +10,7 @@ import { map } from 'rxjs/operators';
 export class HomePage {
 
   variables: any;
+  filtro: string = '';
 
   constructor(private httpClient: HttpClient) {
     this.variables = this.httpClient.get('https://raw.githubusercontent.com/pgalroddaw2/responsive/master/src/app/home/MOCK_DATA.json');

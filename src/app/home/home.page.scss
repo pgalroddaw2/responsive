@@ -31,8 +31,35 @@
   
     transition-duration: 500ms;
 }
+.btc{
+  
+  transition-duration: 500ms;
+}
+.email{
+  
+  transition-duration: 500ms;
+}
+.pais{
+  
+  transition-duration: 500ms;
+}
 .nomap:hover{
-  color:Tomato;
-  transform: scale(1.5, 1.5);
+  color:#3444f7;
+  transform: scale(1.1, 1.1);
+  transform: rotate(360deg);
+}
+.btc:hover{
+  color:#34f788;
+  transform: scale(1.2, 1.2);
+  transform: rotate(5deg);
+}
+.email:hover{
+  color:#34f788;
+  transform: scale(1.1, 1.1);
+}
+.pais:hover{
+  color:#34f788;
+  transform: scale(1.1, 1.1);
+  transform: rotateY(360deg);
 }
 }
