@@ -63,3 +63,41 @@
   transform: rotateY(360deg);
 }
 }
+
+@media only screen and (orientation: portrait) {
+  .nomap{
+    
+      transition-duration: 500ms;
+  }
+  .btc{
+    
+    transition-duration: 500ms;
+  }
+  .email{
+    display:none;
+    transition-duration: 500ms;
+  }
+  .pais{
+    display:none;
+    transition-duration: 500ms;
+  }
+  .nomap:hover{
+    color:#3ef734;
+    transform: scale(1.1, 1.1);
+    transform: rotateY(360deg);
+  }
+  .btc:hover{
+    color:#3b09f2;
+    transform: scale(1.2, 1.2);
+    transform: rotate(-5deg);
+  }
+  .email:hover{
+    color:#ff00b7;
+    transform: scale(1.1, 1.1);
+  }
+  .pais:hover{
+    color:#ff0000;
+    transform: scale(1.1, 1.1);
+    transform: rotateY(360deg);
+  }
+}
